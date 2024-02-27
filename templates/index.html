@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX</title>
+</head>
+<body class="h-screen antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
+    <div hx-get="/menu" hx-trigger="load" id="menu-container">
+    </div>    
+    <div hx-get="/home" hx-trigger="load" id="content-container">
+        {{.partial_content}}
+    </div>
+</body>
+</html>
